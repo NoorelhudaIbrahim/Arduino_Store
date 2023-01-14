@@ -17,7 +17,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
    $product_image = $_POST['image'];
    // $product_quantity = $_POST['quantity'];
 
+
+   $send_to_cart = $conn->prepare("INSERT INTO `cart` (user_id , pid , name , price , image  ) VALUES ( ? , ? , ?, ? , ?)"); 
+
    $send_to_cart = $conn->prepare("INSERT INTO `cart` (user_id , pid , name , price , image ) VALUES (? , ? , ? , ?, ? )"); 
+
    $send_to_cart->execute([$user_id , $product_id , $product_name , $product_price, $product_image]);
 
 }

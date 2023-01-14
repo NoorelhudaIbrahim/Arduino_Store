@@ -49,7 +49,11 @@ if(isset($_POST['add_to_cart'])){
       $price = filter_var($price, FILTER_SANITIZE_STRING);
       $image = $_POST['image'];
       $image = filter_var($image, FILTER_SANITIZE_STRING);
+
+      // $qty = $_POST['qty'];
+
       // $qty = $_POST['quantity'];
+
       // $qty = filter_var($qty, FILTER_SANITIZE_STRING);
 
       $check_cart_numbers = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
@@ -69,9 +73,9 @@ if(isset($_POST['add_to_cart'])){
       //       $delete_wishlist->execute([$name, $user_id]);
       //    }
 
-   //       $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
-   //       $insert_cart->execute([$user_id, $pid, $name, $price, $qty, $image]);
-   //       $message[] = 'added to cart!';
+         $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price,  image) VALUES(?,?,?,?,?)");
+         $insert_cart->execute([$user_id, $pid, $name, $price, $image]);
+         $message[] = 'added to cart!';
          
    //    }
 

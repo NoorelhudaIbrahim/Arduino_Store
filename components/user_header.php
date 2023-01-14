@@ -35,7 +35,6 @@
          <a href="shop.php">Shop</a>
          <a href="contact.php">Contacts</a>
       </nav>
-
       <div class="icons">
          <?php
             // $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
