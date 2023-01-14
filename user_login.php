@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
    $pass = sha1($_POST['pass']);
 
    $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
-   $select_user->execute(['',$email, $pass]);
+   $select_user->execute([$email, $pass]);
    $row = $select_user->fetch(PDO::FETCH_ASSOC);
 
    if($select_user->rowCount() > 0){

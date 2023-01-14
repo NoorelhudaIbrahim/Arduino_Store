@@ -53,12 +53,13 @@ if(isset($_POST['send'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
    <style>
          body{
-               background-image: url("project images/Untitled__5_-removebg-preview.png");
-               background-repeat: no-repeat;
-               background-size: 65%;
+            background-image: url("./project\ images/Untitled__4_-removebg-preview.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left ;
+            background-position-x: -70em;
             }
             input{
                background-color: none !important;
@@ -124,7 +125,7 @@ if(isset($_POST['send'])){
    
 <?php include 'components/user_header.php'; ?>
 
-<section class="contact">
+<section class="contact" style="padding-bottom: 7em; padding-top: 7em;">
 
    <form action="" method="post">
       <h3>get in touch</h3>

@@ -26,7 +26,7 @@
 
    <section class="flex">
 
-      <a href="home.php" class="logo"><span><img style="height:60px; width:70px;" src="images/logo.png"></span></a>
+      <a href="home.php" class="logo"><span><img style="height:60px; width:70px;" src="./project images/logo.png"></span></a>
 
       <nav class="navbar">
          <a href="home.php">Home</a>
@@ -46,7 +46,7 @@
             $total_cart_counts = $count_cart_items->rowCount();
          ?>
          
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="menu-btn" class="fas fa-bars" style="color: white;"></div>
          <!-- <a href="search_page.php"><i class="fa-brands fa-searchengin" style="color: white;font-size: 2.1rem; margin-right:10px;"></i></a> -->
          <a href="cart.php" style="margin-right:10px;"><i class="fa-solid fa-bag-shopping" style="color: white;font-size: 2rem; "></i><p style=" display:inline-block; color:white; ">(<?= $total_cart_counts; ?>)</p></a>
          <div id="user-btn" class="fa-solid fa-user-tie" style="color: white;font-size: 2rem;"></div>

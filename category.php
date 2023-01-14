@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
 <?php include 'components/user_header.php'; ?>
 
 
-<section class="products">
+<section class="products" style="padding-bottom: 7em; padding-top: 7em;">
    <?php
    $category = $_GET['category'];
    $name_of_category = $conn->prepare("SELECT * FROM `category` WHERE category_name = '$category' "); 

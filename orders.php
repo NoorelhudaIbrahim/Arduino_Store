@@ -36,7 +36,7 @@ if(isset($_SESSION['user_id'])){
    
 <?php include 'components/user_header.php'; ?>
 
-<section class="orders">
+<section class="orders" style="padding-bottom: 16em; padding-top: 15em;">
 
    <h1 class="heading" style="margin-top:30px;">placed orders</h1>
 
@@ -44,7 +44,7 @@ if(isset($_SESSION['user_id'])){
 
    <?php
       if($user_id == ''){
-         echo '<p class="empty >please login to see your orders</p>';
+         echo '<p class="empty">please login to see your orders</p>';
       }else{
          $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ?");
          $select_orders->execute([$user_id]);
@@ -73,16 +73,6 @@ if(isset($_SESSION['user_id'])){
    </div>
 
 </section>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
-   </br>
 
 <?php include 'components/footer.php'; ?>
 

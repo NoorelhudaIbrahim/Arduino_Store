@@ -195,7 +195,6 @@ span .fa-solid{
    display: flex;
    align-items: center;
    justify-content: space-between;
-   position: relative;
 }
 
 .header .flex .logo{
@@ -990,12 +989,6 @@ span .fa-solid{
 
 .footer{
    background-color: #165168 !important;
-   position: relative;
-   bottom: 0px;
-   width: 100%;
-   padding: 1em;
-   padding-left: 10em;
-   margin-top: 3em;
    
 }
 
@@ -1086,11 +1079,13 @@ span .fa-solid{
 
    .header .flex .navbar.active{
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      background-color: #117693;
    }
 
    .header .flex .navbar a{
       display: block;
       margin:2rem;
+      color: white;
    }
 
    .home-bg .home .slide .content{
