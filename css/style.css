@@ -631,7 +631,6 @@ span .fa-solid{
    color:var(--red);
    margin-right: auto;
 }
-
 .form-container form{
    /* background-color: #00000042; */
    padding:2rem;
@@ -647,7 +646,7 @@ span .fa-solid{
 .form-container form h3{
    font-size: 2.5rem;
    text-transform: uppercase;
-   color:var(--black);
+   color: black;
 }
 
 .form-container form p{
@@ -663,6 +662,11 @@ span .fa-solid{
    color:var(--black);  
    width: 100%;
    border-bottom: 1px black  solid !important;
+}
+
+.form-container form a{
+   color: #117693;
+   font-size: 14px;
 }
 
 
@@ -1095,6 +1099,14 @@ span .fa-solid{
 
    .home-bg .home .slide .content h3{
       font-size: 3rem;
+   }
+
+   .form-container form h3{
+      color: var(--white) !important;
+   }
+
+   .form-container form a{
+      color: white
    }
 
 }
