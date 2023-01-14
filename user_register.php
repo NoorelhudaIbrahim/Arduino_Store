@@ -11,19 +11,72 @@ if(isset($_SESSION['user_id'])){
 };
 
 // ----------------------------------------------------------------------
+$pass='';
+$cpass='';
+$name='';
+$email='';
+
 if(isset($_POST['submit'])){
 
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $pass = $_POST['pass'];
+   // Validate name
+    if(preg_match("/^([a-zA-Z' ]+)$/",$_POST['name'])){  
+        $name= $_POST['name'];
+        $name = htmlspecialchars($name, ENT_QUOTES);
+       }else{
+           $message[]= "Name must contain only alphabets and space";
+       }
 
-   $pass = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
+   // Validate email
+   if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+      $email = $_POST['email'];
+      $email = htmlspecialchars($email, ENT_QUOTES);
+   }
+   else{
+      $message[] = "Please Enter Your Valid Email Address";
+   }
+   // Validate password
+  if(preg_match('^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$^',$_POST['pass']))
+  {
+   $pass = sha1($_POST['pass']);
+     $pass =htmlspecialchars($pass, ENT_QUOTES);
+ 
+  }
+  else 
+  {
+   $message[]='Invalid Password';
+  }
+  
+  $cpass = sha1($_POST['cpass']);
+  $cpass = htmlspecialchars($cpass, ENT_QUOTES);
 
-   $insert_products = $conn->prepare("INSERT INTO `users`(name, email, `password` ) VALUES (?,?,?)");
-   $insert_products->execute([$name, $email, $pass]);
 
-   header('location:user_login.php');
-}
+     if($name!='' && $email!='' && $pass!='' && $cpass!='')
+     {
+      $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+      $select_user->execute([$email]);
+      $row = $select_user->fetch(PDO::FETCH_ASSOC);
+   
+      if($select_user->rowCount() > 0){
+         $message[] = 'email already exists!';
+      }else{
+
+         $insert_user = $conn->prepare("INSERT INTO `users`(name, email, password) VALUES(?,?,?)");
+         $insert_user->execute([$name, $email, $cpass]);
+         $message[] = 'registered successfully, login now please!';
+      }
+   }
+
+         if( $pass != $cpass){
+            $message[] = 'confirm password not matched!';
+         }
+         else{
+            $insert_user = $conn->prepare("INSERT INTO `users`(name, email, password) VALUES(?,?,?)");
+            $insert_user->execute([$name, $email, $cpass]);
+            $message[] = 'registered successfully, login now please!';
+            header('location: user_login.php');
+
+         }
+      }
 ?>
 
 
@@ -81,7 +134,7 @@ if(isset($_POST['submit'])){
 <?php include 'components/footer.php'; ?>
 
 <!-- <script src="js/script.js"></script> -->
-<script src="js/register.js"></script>
+<!-- <script src="js/register.js"></script> -->
 
 </body>
 </html>

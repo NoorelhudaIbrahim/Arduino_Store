@@ -24,7 +24,7 @@ if(isset($_GET['delete'])){
    $delete_cart->execute([$delete_id]);
    $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE user_id = ?");
    $delete_wishlist->execute([$delete_id]);
-   header('location:users_accounts.php');
+   header('location:user.php');
 }
 ?>
 
@@ -59,12 +59,8 @@ if(isset($_GET['delete'])){
                                         <td class="align-middle text-center"><?= $fetch_accounts['email']; ?></td>
                                         <td class="align-middle text-center">
                                             <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <a href="update_category.php?update=<?= $fetch_category['id']; ?>" class="zmdi zmdi-edit text-dark"></a>
-                                                    <i class=""></i>
-                                                </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                <a href="./category.php?delete=<?= $fetch_category['id']; ?>" class="zmdi zmdi-delete text-dark" onclick="return confirm('delete this category?');">
+                                                <a href="./user.php?delete=<?= $fetch_accounts['id']; ?>" class="zmdi zmdi-delete text-dark" onclick="return confirm('delete this category?');">
                                                 </a>
                                                 </button>
                                             </div>
