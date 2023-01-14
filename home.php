@@ -331,7 +331,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
          <?php if ($fetch_product['category_name'] != 'Nano Family'){?>
 
 
-            <input type="number" name="quantity" class="qty" min="1" max="99" value="1">
+            <!-- <input type="number" name="quantity" class="qty" min="1" max="99" value="1"> -->
 
          <?php } else { ?>
             <input type="hidden" name="quantity" value="1">
