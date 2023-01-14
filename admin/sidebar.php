@@ -48,7 +48,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                     <li>
-                            <a href="index.php">
+                            <a href="../../Arduino_Store/home.php">
                                 <i class="fas fa-home"></i>Back To Site</a>
                         </li>
                         <li>
