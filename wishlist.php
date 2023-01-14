@@ -83,7 +83,7 @@ if(isset($_GET['delete_all'])){
    <?php
       }
    }else{
-      echo '<p class="empty">your wishlist is empty</p>';
+      echo '<p class="empty">your wishlist is empty empty empty </p>';
    }
    ?>
 
