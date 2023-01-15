@@ -73,7 +73,7 @@ if(isset($_POST['update_qty'])){
       <div class="name"><?= $fetch_cart['name']; ?></div>
       <div class="flex">
          <div class="price">$<?= $fetch_cart['price']; ?></div>
-         <input type="number" name="qty" class="qty" min="2" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>">
+         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="<?= $fetch_cart['quantity']; ?>">
          <button type="submit" class="fas fa-edit" name="update_qty"></button>
       </div>
       <div class="sub-total"> sub total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></span> </div>

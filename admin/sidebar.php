@@ -32,6 +32,7 @@
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
+    
 
 </head>
 
@@ -47,28 +48,27 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                    <li>
+                        <li>
                             <a href="../../Arduino_Store/home.php">
                                 <i class="fas fa-home"></i>Back To Site</a>
                         </li>
-                        <li>
-
+                        <li class="active">
                             <a href="user.php">
                                 <i class="fas fa-home"></i>User</a>
                         </li>
-                        <li>
+                        <li class="active1">
                             <a href="./product.php">
                                 <i class="fas fa-table"></i>Products</a>
                         </li>
-                        <li>
+                        <li class="active2">
                             <a href="category.php">
                                 <i class="far fa-check-square"></i>Category</a>
                         </li>
-                        <li>
+                        <li class="active3">
                             <a href="orders.php">
                                 <i class="fas fa-calendar-alt"></i>Order</a>
                         </li>
-                        <li>
+                        <li class="active4">
                             <a href="messages.php">
                                 <i class="fas fa-map-marker-alt"></i>Messages</a>
                         </li>
