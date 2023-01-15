@@ -82,9 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
       <a href="quick_view.php?pid=<?= $fetch_product['id']; ?>" class="fas fa-eye"></a>
       <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
       <div class="name"><?= $fetch_product['name']; ?></div>
-      <?php $product_category = $conn->prepare("SELECT * 
-                                        FROM `products`
-                                        INNER JOIN `category` ON products.category_name = category.category_id");
+      <?php $product_category = $conn->prepare("SELECT * FROM `products` INNER JOIN `category` ON products.category_name = category.category_id");
                   $product_category->execute();
                   if($product_category->rowCount() > 0){
                      while($fetch_product_category = $product_category->fetch(PDO::FETCH_ASSOC)){ 
@@ -102,7 +100,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
 
          <?php if ($fetch_product['on_sale'] == 1){ ?>
 
-            <div class="price"><span><del style="text-decoration:line-through; color:silver">$<?= $fetch_product['price']; ?></del><ins style="color:#67022f;">$<?=$fetch_product['new_price'];?></ins> </span></div>
+            <div class="price"><div style="padding:20px 0px"><del style="text-decoration:line-through; color:silver; margin-right:0.3em">$<?= $fetch_product['price']; ?></del><ins style="color:#67022f;">$<?=$fetch_product['new_price'];?></ins> </div></div>
 
          <?php } else { ?>
 

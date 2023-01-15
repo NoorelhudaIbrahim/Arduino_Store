@@ -237,7 +237,7 @@ span .fa-solid{
 
 .header .flex .profile{
    position: absolute;
-   top:120%; right:2rem;
+   top:120%; right:22rem;
    background-color: var(--white);
    border-radius: .5rem;
    box-shadow: var(--box-shadow);
@@ -837,7 +837,7 @@ span .fa-solid{
 .shopping-cart .fa-edit{
    height: 4.5rem;
    border-radius: .5rem;
-   background-color: var(--orange);
+   background-color: var(--main-color) !important;
    width: 5rem;
    font-size: 2rem;
    color:var(--white);

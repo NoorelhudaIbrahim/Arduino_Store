@@ -1,4 +1,9 @@
-
+<style>
+    .navbar-sidebar .navbar__list li.active4 > a {
+        color: #258687;
+        font-weight: 700;
+    }
+</style>
 <?php require_once('./connectdb.php');
 require_once('./sidebar.php');
 

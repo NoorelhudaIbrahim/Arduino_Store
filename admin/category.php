@@ -2,6 +2,11 @@
     #container-hide{
         display: none;
     }
+    
+    .navbar-sidebar .navbar__list li.active2 > a {
+        color: #258687;
+        font-weight: 700;
+    }
 </style>
 
 <?php
