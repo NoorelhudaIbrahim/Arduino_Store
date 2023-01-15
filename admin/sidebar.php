@@ -72,10 +72,6 @@
                             <a href="messages.php">
                                 <i class="fas fa-map-marker-alt"></i>Messages</a>
                         </li>
-                        <li>
-                            <a href="admin_profile.php">
-                                <i class="fas fa-map-marker-alt"></i>Admin Profile</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
