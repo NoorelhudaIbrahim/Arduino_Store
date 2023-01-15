@@ -40,7 +40,7 @@ require_once('./sidebar.php');
                                     </div>
                                     <div class="card-body">
                                         <div class="mx-auto d-block">
-                                            <img class="rounded-circle mx-auto d-block" src="images/icon/avatar-01.jpg" alt="Card image cap">
+                                            <img class="rounded-circle mx-auto d-block" src="../images/1077114.png" alt="Card image cap" >
                                             <h5 class="text-sm-center mt-2 mb-1">admin id : <span><?= $fetch_accounts['id']; ?></span></h5>
                                             <div class="card-text text-sm-center">admin name : <span><?= $fetch_accounts['name']; ?></span> </div>
                                             

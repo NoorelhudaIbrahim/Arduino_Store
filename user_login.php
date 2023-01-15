@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
    
 <?php include 'components/user_header.php'; ?>
 
-<section class="form-container" style="padding-bottom: 15em; padding-top: 14em;">
+<section class="form-container" style="padding-bottom: 19em; padding-top: 18em;">
 
    <form action="" method="post">
       <h3>login now</h3>

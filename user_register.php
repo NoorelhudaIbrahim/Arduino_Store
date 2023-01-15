@@ -110,7 +110,7 @@ if(isset($_POST['submit'])){
    
 <?php include 'components/user_header.php'; ?>
 
-<section class="form-container" style="padding-bottom: 7em; padding-top: 7em;">
+<section class="form-container" style="padding-bottom: 12em; padding-top: 11em;">
 
    <form action="" method="post" auto_complete="off">
       <h3>register now</h3>

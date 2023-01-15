@@ -111,14 +111,14 @@ if(isset($_SESSION['user_id'])){
          <div class="container">
             
             <div>
-               <img class="image_about" src="./images/slide-image-free-img.jpg" alt="">
+               <img class="image_about" src="./images/bg.jpg" alt="">
             </div>
             <div>
                <h3 style="color:#117693;">What is Arduino?</h3>
                
                <p >Arduino designs, manufactures, and supports electronic devices and software, allowing people around the world to easily access advanced technologies that interact with the physical world. Our products are straightforward, simple, and powerful, ready to satisfy users’ needs from students to makers and all the way to professional developers.</p>
 
-               <a href="contact.php" class="btn" style="background-color:#117693;">Contact us </a>
+               <a href="https://arduinointro.com/articles/projects/all-you-need-to-know-about-arduino" class="btn" style="background-color:#117693;">Show More </a>
             </div>
             <div>
                <h3 style="color:#117693;">Our Mission & Vision</h3>
@@ -149,37 +149,37 @@ if(isset($_SESSION['user_id'])){
 
    <div class="swiper-slide slide">
       <img src="images/1.jpeg" alt="">
-      <p>Full stack devloper orange Acdemy</p>
+      <p>Full stack web devloper </p>
 
-      <h3>karam</h3>
+      <h3>karam Daneh</h3>
    </div>
 
    <div class="swiper-slide slide">
       <img src="images/4444.jfif" alt="">
-      <p>Full stack devloper orange  Acdemy </p>
+      <p>Full stack web devloper </p>
    
-      <h3>jack</h3>
+      <h3>Jack Al-lousi</h3>
    </div>
 
    <div class="swiper-slide slide">
       <img src="images/23.jpg" alt="">
-      <p>Full stack devloper orange Acdemy</p>
+      <p>Full stack web devloper </p>
    
-      <h3>huda</h3>
+      <h3>Huda Al-usaily</h3>
    </div>
 
    <div class="swiper-slide slide">
       <img src="images/22.jpg" alt="">
-      <p>Full stack devloper orange Acdemy</p>
+      <p>Full stack web devloper </p>
    
-      <h3>mohamad</h3>
+      <h3>Mohammed Nassereldeen</h3>
    </div>
 
    <div class="swiper-slide slide">
-      <img src="images/1077114.png" alt="">
-      <p>Full stack devloper orange Acdemy</p>
+      <img src="images/noorelhuda.jpeg" alt="">
+      <p>Full stack web devloper </p>
       
-      <h3>Noor huda</h3>
+      <h3>Nooralhuda Al-shebailat</h3>
    </div>
 
 </div>

@@ -2,8 +2,10 @@
 <style>
    .footer{
       padding: 0px;
-      margin: 0px;
-      /* position: absolute; */
+
+      /* margin: 0px; */
+      position: relative;
+      bottom: -20rem;
  
    }
 
